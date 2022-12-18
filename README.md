@@ -1,5 +1,18 @@
-# xdev68k
+# xdev68k-mac
 
+xdev68kをmacOSで環境構築できるように修正したバージョンです。
+
+- 事前に以下のパッケージのインストールが必要です。
+```
+$ brew install coreutils
+$ brew install wget
+$ brew install cmake
+$ brew install automake
+$ brew install lha
+```
+
+# 以下はオリジナル版の解説です。
+手順1はスキップでOKです。
 
 # 解説
 

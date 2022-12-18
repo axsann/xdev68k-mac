@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/zsh
 #------------------------------------------------------------------------------
 #
 #	install_xdev68k-utils.sh
@@ -85,22 +85,22 @@ cp -p ${ARCHIVE} ../archive/download/run68mac-${ARCHIVE}
 #------------------------------------------------------------------------------
 # lha コマンドをソースからビルド
 #------------------------------------------------------------------------------
-ARCHIVE="release-20211125.zip"
-SHA512SUM="e75dc606d7637f2c506072f2f44eda69da075a57ad2dc76f54e41b1d39d34ca01410317cc6538f8ea42f4da81ca14889df1195161f4e305d2d67189ec8e60e24"
-wget -nc https://github.com/jca02266/lha/archive/refs/tags/${ARCHIVE}
-if [ $(sha512sum ${ARCHIVE} | awk '{print $1}') != ${SHA512SUM} ]; then
-	echo "SHA512SUM verification of ${ARCHIVE} failed!"
-	exit
-fi
-unzip ${ARCHIVE}
-cd lha-release-20211125/
-autoreconf -is
-sh ./configure
-make
-cd ../
+# ARCHIVE="release-20211125.zip"
+# SHA512SUM="e75dc606d7637f2c506072f2f44eda69da075a57ad2dc76f54e41b1d39d34ca01410317cc6538f8ea42f4da81ca14889df1195161f4e305d2d67189ec8e60e24"
+# wget -nc https://github.com/jca02266/lha/archive/refs/tags/${ARCHIVE}
+# if [ $(sha512sum ${ARCHIVE} | awk '{print $1}') != ${SHA512SUM} ]; then
+# 	echo "SHA512SUM verification of ${ARCHIVE} failed!"
+# 	exit
+# fi
+# unzip ${ARCHIVE}
+# cd lha-release-20211125/
+# autoreconf -is
+# sh ./configure
+# make
+# cd ../
 
 # lha コマンド
-LHA=lha-release-20211125/src/lha
+LHA=lha
 
 
 #------------------------------------------------------------------------------
